@@ -20,3 +20,19 @@ export async function GET (req) {
 } 
 
 
+export async function POST (req) {
+    try{
+
+        await dbConnect()
+
+        const product = await Product.create(req.body)
+
+        return new NextResponse(JSON.stringify(product),{status: 201})
+
+    }catch(err){
+        return new NextResponse("Database Error",{status: 500})
+    }
+}
+
+
+

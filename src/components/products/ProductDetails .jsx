@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import { useRef } from "react";
+import BreadCrumbs from "../layouts/BreadCrumbs ";
 
 // const ProductDetails = ({ product }) => {
 
@@ -171,7 +172,7 @@ const ProductDetails = ({ product }) => {
   ];
   return (
     <>
-      {/* <BreadCrumbs breadCrumbs={breadCrumbs} /> */}
+      <BreadCrumbs breadCrumbs={breadCrumbs} />
       <section className="bg-white py-10">
         <div className="container max-w-screen-xl mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-5">
